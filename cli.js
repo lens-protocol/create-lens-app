@@ -40,7 +40,7 @@ async function main() {
     const kebabRegez = /^([a-z]+)(-[a-z0-9]+)*$/
 
     program
-      .name('Lens app generator.')
+      .name('Create Lens App')
       .description('Create a new Lens app with a single command.')
       .option('-t, --type <type of app>', 'Set the app type as basic or PWA')
   
