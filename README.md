@@ -3,9 +3,9 @@
 Easily spin up a Lens Protocol app with one command.
 
 ```sh
-$ npx create-lens-app
+$ bunx create-lens-app
 
-# or bunx create-lens-app
+# or npx create-lens-app
 ```
 
 ### Boilerplates
