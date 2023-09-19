@@ -1,6 +1,6 @@
 # Create Lens App CLI
 
-Easily spin up a Lens Protocol app with one command.
+Easily spin up a social app with one command.
 
 ```sh
 $ bunx create-lens-app

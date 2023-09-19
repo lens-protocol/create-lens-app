@@ -1,7 +1,7 @@
 {
   "name": "create-lens-app",
-  "version": "0.1.05",
-  "description": "Create a new Lens app with a single command.",
+  "version": "0.1.06",
+  "description": "Create a social app with a single command.",
   "type": "module",
   "bin": "cli.js",
   "scripts": {

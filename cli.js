@@ -41,7 +41,7 @@ async function main() {
 
     program
       .name('Create Lens App')
-      .description('Create a new Lens app with a single command.')
+      .description('Create a new social app with a single command.')
       .option('-t, --type <type of app>', 'Set the app type as basic or PWA')
   
     program.parse(process.argv)
