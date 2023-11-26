@@ -127,10 +127,9 @@ Installing dependencies:
     spinner.start()
     await execa('git', ['clone', repoUrl, appName])
     if (type === 'pwa') {
-      await execa('cd', [appName])
-      await execa('git', ['branch', '-m', 'walletconnect', 'main'])
-      await execa('git', ['remote', 'rm', 'origin'])
-      await execa('cd', ['..'])
+      await execa('ls')
+      await execa('cd', [appName], '&&', 'git', ['branch', '-m', 'walletconnect', 'main'])
+      await execa('cd', [appName], '&&', 'git', ['remote', 'rm', 'origin'])
     }    
 
     let packageJson = fs.readFileSync(`${appName}/package.json`, 'utf8')
@@ -162,6 +161,7 @@ Installing dependencies:
     log(`${green.bold('Success!')} Created ${appName} at ${process.cwd()} \n`)
     log(`To get started, change into the new directory and run ${chalk.cyan(startCommand)}`)
   } catch (err) {
+    console.log(err);
     log('\n')
     if (err.exitCode == 128) {
       log('Error: directory already exists.')
