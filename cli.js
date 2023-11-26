@@ -126,6 +126,12 @@ Installing dependencies:
 
     spinner.start()
     await execa('git', ['clone', repoUrl, appName])
+    if (type === 'pwa') {
+      await execa('cd', [appName])
+      await execa('git', ['branch', '-m', 'walletconnect', 'main'])
+      await execa('git', ['remote', 'rm', 'origin'])
+      await execa('cd', ['..'])
+    }    
 
     let packageJson = fs.readFileSync(`${appName}/package.json`, 'utf8')
     const packageObj = JSON.parse(packageJson)
