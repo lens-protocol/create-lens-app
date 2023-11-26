@@ -161,7 +161,6 @@ Installing dependencies:
     log(`${green.bold('Success!')} Created ${appName} at ${process.cwd()} \n`)
     log(`To get started, change into the new directory and run ${chalk.cyan(startCommand)}`)
   } catch (err) {
-    console.log(err);
     log('\n')
     if (err.exitCode == 128) {
       log('Error: directory already exists.')
